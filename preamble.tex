@@ -1,0 +1,98 @@
+% the usual
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	linkcolor={RoyalBlue},
+	citecolor={black},
+	urlcolor={blue!80!black}
+}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{emptypage}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{darker}{HTML}{2C3E50}
+\definecolor{lighter}{HTML}{3498DB}
+\colorlet{lighter}{lighter!10}
+\definecolor{compl}{HTML}{2980B9}
+\usepackage{siunitx}
+
+% math
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage{bm}
+
+% fonts
+%\usepackage{newpxtext}
+\usepackage{pxfonts}
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{cmbright,esint}
+%\usepackage{eulerpx}
+%\usepackage{esint}
+
+% tikz
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tikz-cd}
+\usepackage{tkz-euclide}
+\usetikzlibrary{intersections, angles, quotes, calc, positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.markings}
+\tikzset{->-/.style={decoration={markings, mark=at position 0.5 with {\arrow{>}}},postaction={decorate}}}
+
+% tcolorbox
+
+\usepackage{etoolbox}
+\usepackage{varwidth}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+
+\tcbset{
+	teorStyle/.style={
+		enhanced, frame empty, interior empty,
+		boxrule=2mm,borderline={1pt}{0pt}{Black},
+		fonttitle=\large\bfseries,description font=\bfseries,
+		before skip=12pt,after skip=12pt,
+		colback=White,colbacktitle=White,coltitle=RoyalBlue,
+		separator sign dash,
+		sharp corners=northwest,
+	},
+	eqStyle/.style={
+		enhanced,frame empty,interior empty,
+		before skip=12pt,after skip=12pt,
+		colframe=Black,colbacktitle=White,coltitle=Black,
+		fonttitle=\bfseries,description font=\bfseries,
+		borderline={1pt}{0pt}{Black},
+		separator sign dash, sharp corners=southeast,
+		attach boxed title to top left={yshift=-2mm,xshift=2mm},
+		boxed title style={boxrule=1pt,sharp corners},varwidth boxed title
+	}
+}
+\newcounter{dummy}
+\numberwithin{dummy}{section}
+
+\newtcbtheorem[number within=chapter]{eq}{Equation}{eqStyle}{eq}
+
+\theoremstyle{definition}
+\newtheorem*{ex}{Example}
+\tcolorboxenvironment{ex}{
+	breakable,enhanced,
+	before skip=12pt,after skip=12pt,
+	colback=White,colframe=Black,
+	boxrule=1pt,sharp corners=northwest,sharp corners=southeast
+}
+
+% renewcommands and stuff
+\newcommand{\ihat}{\bm{\hat{\imath}}}
+\newcommand{\jhat}{\bm{\hat{\jmath}}}
+\newcommand{\khat}{\bm{\hat{k}}}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	[decoration={markings,
+	mark= at position 0.5 with {\arrow{>}}}
+	]
+	%\draw[lightgray] (0,0) grid (4,2);
+	\coordinate (A) at (1,1);
+	\coordinate (B) at (3,1);
+	\draw [->-] (A) arc (180:0:1);
+	%\draw[postaction={decorate}] (A) arc (120:60:2);
+	\draw[->-] (A) arc (180:0:1 and 0.5);
+	\draw[->-] (A) -- (B);
+	\draw[postaction={decorate}] (A) arc (180:360:1 and 0.5);
+	\draw[postaction={decorate}] (A) arc (180:360:1);
+	%\draw[lightgray] (2,1) circle (1);
+	\draw[postaction={decorate}] (A) -- (0,1);
+	\draw[postaction={decorate}] (A) -- (0.2,1.8);
+	\draw[postaction={decorate}] (A) -- (0.2,0.2);
+	\draw[postaction={decorate}] (3.8,1.8) -- (B);
+	\draw[postaction={decorate}] (4,1) -- (B);
+	\draw[postaction={decorate}] (3.8,0.2) -- (B);
+	\fill[white] (A) circle (0.2cm);
+	\fill[white] (B) circle (0.2cm);
+	\draw(A) circle (0.2cm) node[]{$+$};
+	\draw (B) circle (0.2cm) node[]{$-$};
+\end{tikzpicture}

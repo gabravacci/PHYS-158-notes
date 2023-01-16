@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+	%\draw[lightgray] (-2,-2) grid (2,2);
+	\coordinate (A) at (-1,-1);
+	\coordinate (B) at (1,1);
+	\coordinate (C) at (0,-1);
+	\coordinate (D) at (1,-1);
+	\draw[->] (A) -- (-1,2) node[left]{$y$};
+	\draw[->] (A) -- (2,-1) node[right]{$x$};
+	\node[anchor=south west] at (C){$\phi$};
+	\draw (C) arc (0:45:1);
+	\draw[dashed] (A) -- (B) node[midway,above]{$r$};
+	\draw[->] (A) -- (-2,-2) node[below,left]{$\mathbf{F}_{21}$};
+	\draw[->] (B) -- (2,2) node[above,right]{$\mathbf{F}_{12} $};
+	\fill[white] (B) circle (0.2cm);
+	\fill[white] (A) circle (0.2cm);
+	\draw (B) circle (0.2cm) node[]{$+$};
+	\draw (1.5,1) node[]{$q_2$};
+	\draw (A) circle (0.2cm) node[]{$+$};
+
+	\draw (-1.5,-1) node[]{$q_1$};
+
+	\end{tikzpicture}

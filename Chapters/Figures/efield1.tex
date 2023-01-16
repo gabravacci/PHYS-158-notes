@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (1,1);
+	\coordinate (C) at (0,-1);
+	\filldraw[black] (B) circle (1pt) node[above]{$q_0$};
+	\filldraw[black] (C) circle (1pt) node[below]{$q_0$};
+	\draw[->] (B) -- (0.5,0.5);
+	\draw[->] (C) -- (0,-0.5);
+	\fill[white] (A) circle (0.2cm);
+	\draw (A) circle (0.2cm) node[]{$-$};	
+\end{tikzpicture}
